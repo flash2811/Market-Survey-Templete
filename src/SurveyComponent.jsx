@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 
 import * as Survey from "survey-react";
@@ -13,13 +14,10 @@ Survey.StylesManager.applyTheme("modern");
 class SurveyComponent extends Component {
     constructor() {
         super();
-        
+
     }
     render() {
         //fssadas
-
-        
-
         const json = {
             questions: [
                 {
@@ -102,20 +100,33 @@ class SurveyComponent extends Component {
                 }
 
             ]
-};
-const survey = new Survey.Model(json);
+        };
+        const survey = new Survey.Model(json);
 
-survey
-    .onComplete
-    .add(function (result) {
-        console.log('Subhrajyoti', result.data);    
-    });
+        survey
+            .onComplete
+            .add(function (result) {
+                console.log('Subhrajyoti', result.data);
+            });
 
         return (
-            <Survey.Survey
-                model={survey}
-                //onComplete
-            />
+            // <BrowserRouter>
+            //     <div>
+            //         <header>
+            //             <nav>
+            //                 <ul>
+            //                     <li><a href="/SWOTPage"> SWOT Page</a></li>
+            //                 </ul>
+            //             </nav>
+            //         </header>
+                    <Survey.Survey
+                        model={survey}
+                    //onComplete
+                    />
+
+            //     </div>
+            // </BrowserRouter>
+
         );
     }
 }

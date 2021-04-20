@@ -1,5 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import SurveyComponent from './SurveyComponent';
+import { render } from 'react-dom'
+//import ReactDOM from 'react-dom';
+//import SurveyComponent from './SurveyComponent';
+//import SWOTPage from './SWOTPage';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-ReactDOM.render(<SurveyComponent />, document.getElementById('surveyElement'));
+render((
+    <BrowserRouter>
+        {/* <SurveyComponent /> */}
+        <App />
+    </BrowserRouter>
+), document.getElementById('surveyElement'));
+
