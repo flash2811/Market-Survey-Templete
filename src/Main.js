@@ -1,7 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
-import SWOTPage from './SWOTPage'
+import Survey from './Survey'
+import SWOT from './SWOT'
 // import Roster from './Roster'
 // import Schedule from './Schedule'
 
@@ -14,7 +15,8 @@ const Main = () => (
   <main>
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path='/SWOTPage' component={SWOTPage}/>
+      <Route path='/Survey' component={Survey}/>
+      <Route path='/SWOT' component={SWOT}/>
     </Switch>
   </main>
 )

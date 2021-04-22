@@ -1,11 +1,11 @@
 import React from 'react'
 import SurveyComponent from './SurveyComponent'
 
-const SWOTPage = () => (
+const Survey = () => (
   <div>
-    <h1>Welcome to the SWOT Page</h1>
+    <h1>Welcome to the Survey Page</h1>
     <SurveyComponent />
   </div>
 )
 
-export default SWOTPage
+export default Survey
